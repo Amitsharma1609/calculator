@@ -1,0 +1,123 @@
+.main_num{
+    color: black;
+    background-color: white;
+    display: inline;
+    padding: 5px;
+    margin: 0px;
+    height: 50px;
+    width: 68px;
+    border: rgb(230, 227, 227);
+    font-weight: 300;
+    text-align: center;
+    border-style: ridge;
+    border-width: 1px 1px;
+}
+.btn{
+    color: black;
+    background-color: white;
+    display: inline;
+    padding: 5px;
+    margin: 0px;
+    height: 50px;
+    width: 68px;
+    border: rgb(230, 227, 227);
+    font-weight: 300;
+    text-align: center;
+    border-style: ridge;
+    border-width: 1px 1px;
+}
+.equal_to{
+    background-color: rgb(89, 154, 252);
+    color: black;
+    width: 68px;
+    height: 50px;
+    border: white;
+   
+}
+#screen{
+    border: white;
+    height: 75px;
+    width: 360px;
+    text-align: right;
+    font-size: 22px;
+}
+#ac{
+    color: black;
+    background-color: white;
+    display: inline;
+    padding: 5px;
+    margin: 0px;
+    height: 50px;
+    width: 68px;
+    border: rgb(230, 227, 227);
+    font-weight: 300;
+    text-align: center;
+    border-style: ridge;
+    border-width: 1px 1px;
+}
+#ce{
+    color: black;
+    background-color: white;
+    display: inline;
+    padding: 5px;
+    margin: 0px;
+    height: 46px;
+    width: 68px;
+    border: rgb(230, 227, 227);
+    font-weight: 300;
+    text-align: center;
+    border-style: ridge;
+    border-width: 1px 1px;
+}
+.dropdown{
+    display:inline-block;
+    position:relative;
+  }
+
+  .dropdown button{
+
+    padding:8px 16px;
+    background-color:rgb(255, 255, 255);
+    color:rgb(12, 12, 12);
+    transition:.3s;
+    cursor:pointer;
+    border: white;
+    border-style: ridge;
+  }
+  
+  .dropdown:hover button{
+    background-color:rgb(255, 255, 255);
+  }
+  
+  .dropdown div{
+    display: grid;
+    background-color:rgb(255, 255, 255);
+    border: rgb(247, 234, 234);
+    border-style: ridge;
+    border-width: 1px 1px;
+    z-index:1;
+    visibility:hidden;
+    position:absolute;
+    min-width:100%;
+    opacity:0;
+    transition:.3s;
+  }
+  
+  .dropdown:hover div{
+    visibility:visible;
+    opacity:1;
+  }
+  
+  .dropdown div a{
+    display:grid;
+    text-decoration:none;
+    padding:0px;
+    color:#000;
+    transition:.1s;
+    white-space:nowrap;
+  }
+  
+  .dropdown div a:hover{
+    background-color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+  }
