@@ -4,13 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Scientific Calculator</title>
+	<title>Calculator1</title>
 	<link rel="stylesheet" href="sytle.css">
-
 </head>
 
 <body>
-
 	<div class="container">
 		<div class="display">
 			<input id="screen" type="text" placeholder="0">
@@ -49,12 +47,8 @@
 						<button onclick="sinh1()"><a href="#">sinh</a></button>
 						<button onclick="cosh1()"><a href="#">cosh</a></button>
 						<button onclick="tanh1()"><a href="#">tanh</a></button>
-							
 					</div>
 				</div>
-
-
-
 				<div class="dropdown">
 					<button>Function</button>
 					<div>
@@ -65,8 +59,6 @@
 					</div>
 				</div>
 			</div>
-
-
 			<div class="row1">
 				<button onclick="pow()" class="main_num">2 <span
 						style="position: relative; bottom: .4em; right: .1em;">nd</span> </button>
@@ -81,11 +73,7 @@
 				<button class="main_num" onclick="abs1()">|x|</button>
 				<button onclick="expo()" class="main_num">exp</button>
 				<button class="btn">%</button>
-
-
-
 			</div>
-
 			<div class="row3">
 				<button onclick="sqrt1()" class="main_num">2√x</button>
 				<button class="btn">(</button>
@@ -93,38 +81,26 @@
 				<button onclick="fact()" class="main_num">n!</button>
 				<button class="btn">÷</button>
 			</div>
-
 			<div class="row4">
 				<button onclick="pow3()" class="main_num">x<sup>3</sup></button>
 				<button class="btn">7</button>
 				<button class="btn">8</button>
 				<button class="btn">9</button>
 				<button class="btn">×</button>
-
-
-
-
 			</div>
-
 			<div class="row5">
-
 				<button onclick="tens()" class="main_num">10<sup>x</sup></button>
 				<button class="btn">4</button>
 				<button class="btn">5</button>
 				<button class="btn">6</button>
 				<button class="btn">-</button>
 			</div>
-
 			<div class="row6">
 				<button onclick="log()" class="main_num">log</button>
 				<button class="btn">1</button>
 				<button class="btn">2</button>
 				<button class="btn">3</button>
 				<button class="btn">+</button>
-
-
-
-
 			</div>
 			<div>
 				<button onclick="ln()" class="main_num">ln</button>
@@ -135,185 +111,147 @@
 			</div>
 		</div>
 	</div>
-
-
-
-	<script>
-		var screen = document.querySelector('#screen');
-		var btn = document.querySelectorAll('.btn');
-
-
-		for (item of btn) {
-			item.addEventListener('click', (e) => {
-				btntext = e.target.innerText;
-				switch (btntext) {
-					case '×':
-						btntext = '*';
-						break;
-					case '÷':
-						btntext = '/';
-						break;
-					case '%':
-						btntext = '%';
-						break;
-
+<script>
+	var screen = document.querySelector('#screen');
+	var btn = document.querySelectorAll('.btn');
+	for (item of btn) {
+		item.addEventListener('click', (e) => {
+			btntext = e.target.innerText;
+			switch (btntext) {
+				case '×':
+					btntext = '*';
+					break;
+				case '÷':
+					btntext = '/';
+					break;
+				case '%':
+					btntext = '%';
+					break;
 				}
-				screen.value += btntext;
+			screen.value += btntext;
 			});
 		}
-
-
-		function backspc() {
-			screen.value = screen.value.substr(0, screen.value.length - 1);
-		}
-
-
-		function pow() {
-			screen.value = Math.pow(screen.value, 2);
-		}
-
-
-
-		function sqrt1() {
-			screen.value = Math.sqrt(screen.value, 1 / 2);
-		}
-
-		function exp() {
-
-			screen.value = Math.exp(screen.value);
-
-		}
-
-		function pi() {
-			if (screen.value == 0) {
-				screen.value = 3.14;
-			} else {
-				screen.value = screen.value * Math.PI;
+	function backspc() {
+		screen.value = screen.value.substr(0, screen.value.length - 1);
+	}
+	function pow() {
+		screen.value = Math.pow(screen.value, 2);
+	}
+	function sqrt1() {
+		screen.value = Math.sqrt(screen.value, 1 / 2);
+	}
+	function exp() {
+		screen.value = Math.exp(screen.value);
+	}
+	function pi() {
+		if (screen.value == 0) {
+			screen.value = 3.14;
+		} else {
+			screen.value = screen.value * Math.PI;
 			}
 		}
-
-		function log() {
-			screen.value = Math.log10(screen.value);
+	function log() {
+		screen.value = Math.log10(screen.value);
+	}
+	function ln() {
+		screen.value = Math.log(screen.value);
+	}
+	function fact() {
+		var i, num, f;
+		if (screen.value == 0) {
+			f = 0;
+		} else {
+			f = 1;
 		}
-
-		function ln() {
-			screen.value = Math.log(screen.value);
+		num = screen.value;
+		for (i = 1; i <= num; i++) {
+			f = f * i;
 		}
-
-		function fact() {
-			var i, num, f;
-			if (screen.value == 0) {
-				f = 0;
-			} else {
-				f = 1;
-			}
-			num = screen.value;
-			for (i = 1; i <= num; i++) {
-				f = f * i;
-			}
-			i = i - 1;
-
-			screen.value = f;
+		i= i - 1;
+		screen.value = f;
 		}
-
-
-		function divide() {
-			screen.value = 1 / screen.value;
+	function divide() {
+		screen.value = 1 / screen.value;
+	}
+	function powx() {
+		screen.value = 10 ** screen.value;
+	}
+	function pow3() {
+		screen.value = Math.pow(screen.value, 3);
+	}
+	function negps() {
+		if (screen.value == 0) {
+			screen.value = '-';
+		} else {
+			screen.value = screen.value * -1;
 		}
-
-		function powx() {
-			screen.value = 10 ** screen.value;
+	}
+	function e() {
+		if (screen.value == 0) {
+			screen.value = Math.E;
+		} else {
+			screen.value = screen.value * Math.E;
 		}
-
-		function pow3() {
-			screen.value = Math.pow(screen.value, 3);
-		} 1
-
-		function negps() {
-
-			if (screen.value == 0) {
-				screen.value = '-';
-			} else {
-				screen.value = screen.value * -1;
-			}
-		}
-
-
-		function e() {
-			if (screen.value == 0) {
-				screen.value = Math.E;
-			} else {
-				screen.value = screen.value * Math.E;
-			}
-		}
-
-		function sin1() {
-			screen.value = Math.sin(screen.value * Math.PI / 180);
-		}
-
-		function cos1() {
-			screen.value = Math.cos(screen.value * Math.PI / 180);
-		}
-
-		function tan1() {
-			screen.value = Math.tan(screen.value * Math.PI / 180);
-		}
-
-		function cot1() {
-			screen.value = Math.cos(screen.value * Math.PI / 180) / Math.sin(screen.value * Math.PI / 180);
-		}
-		function cosec1() {
-			screen.value = 1 / Math.sin(screen.value * Math.PI / 180);
-		}
-		function sec1() {
-			screen.value = 1 / Math.cos(screen.value * Math.PI / 180);
-		}
-		function tanh1(){
-			screen.value = Math.tanh(screen.value * Math.PI /180);
-		}
-
-		function fe() {
-			var num = parseInt(screen.value);
-			screen.value = num.toExponential();
-
-		}
-		function divide() {
-			screen.value = 1 / screen.value;
-		}
-		function tens() {
-			screen.value = 10 ** screen.value;
-		}
-		function expo() {
-			var num = parseInt(screen.value);
-			screen.value = num.toExponential();
-		}
-		function Rad() {
-			screen.value = screen.value * 3.14159 / 180.0;
-		}
-		function Grad() {
-			screen.value = screen.value * 200.00 / 180.0;
-		}
-		function floor1() {
-			screen.value = Math.floor(screen.value * Math.PI / 180);
-		}
-		function ceil1() {
-			screen.value = Math.ceil(screen.value);
-		}
-		function cosh1() {
-			screen.value = Math.cosh(screen.value);
-		}
-		function sinh1() {
-			screen.value = cMath.sinh(screen.value);
-		}
-
-
-		function abs1() {
-			screen.value = Math.abs(screen.value);
-		}
-		function random1() {
-			screen.value = Math.random(screen.value);
-		}
+	}
+	function sin1() {
+		screen.value = Math.sin(screen.value * Math.PI / 180);
+	}
+	function cos1() {
+		screen.value = Math.cos(screen.value * Math.PI / 180);
+	}
+	function tan1() {
+		screen.value = Math.tan(screen.value * Math.PI / 180);
+	}
+	function cot1() {
+		screen.value = Math.cos(screen.value * Math.PI / 180) / Math.sin(screen.value * Math.PI / 180);
+	}
+	function cosec1() {
+		screen.value = 1 / Math.sin(screen.value * Math.PI / 180);
+	}
+	function sec1() {
+		screen.value = 1 / Math.cos(screen.value * Math.PI / 180);
+	}
+	function tanh1() {
+		screen.value = Math.tanh(screen.value * Math.PI / 180);
+	}
+	function fe() {
+		var num = parseInt(screen.value);
+		screen.value = num.toExponential();
+	}
+	function divide() {
+		screen.value = 1 / screen.value;
+	}
+	function tens() {
+		screen.value = 10 ** screen.value;
+	}
+	function expo() {
+		var num = parseInt(screen.value);
+		screen.value = num.toExponential();
+	}
+	function Rad() {
+		screen.value = screen.value * 3.14159 / 180.0;
+	}
+	function Grad() {
+		screen.value = screen.value * 200.00 / 180.0;
+	}
+	function floor1() {
+		screen.value = Math.floor(screen.value * Math.PI / 180);
+	}
+	function ceil1() {
+		screen.value = Math.ceil(screen.value);
+	}
+	function cosh1() {
+		screen.value = Math.cosh(screen.value);
+	}
+	function sinh1() {
+		screen.value = cMath.sinh(screen.value);
+	}
+	function abs1() {
+		screen.value = Math.abs(screen.value);
+	}
+	function random1() {
+		screen.value = Math.random(screen.value);
+	}
 	</script>
 </body>
-
 </html>
