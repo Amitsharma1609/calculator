@@ -80,25 +80,25 @@ function e() {
     }
 }
 function sin1() {
-    screen.value = Math.sin(screen.value * Math.PI / 180);
+    screen.value = Math.sin(screen.value);
 }
 function cos1() {
-    screen.value = Math.cos(screen.value * Math.PI / 180);
+    screen.value = Math.cos(screen.value);
 }
 function tan1() {
-    screen.value = Math.tan(screen.value * Math.PI / 180);
+    screen.value = Math.tan(screen.value);
 }
 function cot1() {
-    screen.value = Math.cos(screen.value * Math.PI / 180) / Math.sin(screen.value * Math.PI / 180);
+    screen.value = Math.cos(screen.value) / Math.sin(screen.value);
 }
 function cosec1() {
-    screen.value = 1 / Math.sin(screen.value * Math.PI / 180);
+    screen.value = 1 / Math.sin(screen.value );
 }
 function sec1() {
-    screen.value = 1 / Math.cos(screen.value * Math.PI / 180);
+    screen.value = 1 / Math.cos(screen.value);
 }
 function tanh1() {
-    screen.value = Math.tanh(screen.value * Math.PI / 180);
+    screen.value = Math.tanh(screen.value);
 }
 function fe() {
     var num = parseInt(screen.value);
