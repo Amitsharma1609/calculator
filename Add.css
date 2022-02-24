@@ -1,0 +1,91 @@
+   
+body{
+    background-color: #dd9bf7;
+}
+
+h1 {
+    padding-left: 520px;
+    margin-top: 100px;
+}
+
+input[type=number] {
+    padding: 5px;
+}
+
+.set {
+    padding-left: 520px;
+    padding-bottom: 10px;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
+
+.toset {
+    padding-left: 520px;
+    padding-bottom: 10px;
+    position: relative;
+    margin-top: 10px;
+}
+
+#sub {
+    margin-top: 20px;
+    margin-left: 630px;
+    height: 39px;
+    width: 70px;
+}
+
+.myname {
+    margin-left: 20px;
+}
+
+#toConvertionUnit {
+    height: 30px;
+}
+
+#fromConvertionUnit {
+    height: 30px;
+}
+
+
+h1 {
+    padding-left: 520px;
+    margin-top: 100px;
+}
+
+input[type=number] {
+    padding: 5px;
+}
+
+.set {
+    padding-left: 520px;
+    padding-bottom: 10px;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
+
+.toset {
+    padding-left: 520px;
+    padding-bottom: 10px;
+    position: relative;
+    margin-top: 10px;
+}
+
+#sub {
+    margin-top: 20px;
+    margin-left: 630px;
+    height: 39px;
+    width: 70px;
+}
+
+.myname {
+    margin-left: 20px;
+}
+
+#toConvertionUnit {
+    height: 30px;
+}
+
+#fromConvertionUnit {
+    height: 30px;
+}
